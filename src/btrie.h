@@ -33,6 +33,11 @@
 #ifndef BTRIE_H
 #define BTRIE_H
 
+#ifdef __FreeBSD__
+#include <sys/socket.h>
+#include <netinet/in.h>
+#endif
+
 #include <arpa/inet.h>
 typedef struct btrie_collapsed_node *btrie;
 
